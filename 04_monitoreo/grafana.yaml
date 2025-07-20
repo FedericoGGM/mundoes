@@ -7,3 +7,32 @@ datasources:
       url: http://prometheus-server.prometheus.svc.cluster.local
       access: proxy
       isDefault: true
+
+# Dashboard providers configuration
+dashboardProviders:
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+    - name: 'default'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      editable: true
+      options:
+        path: /var/lib/grafana/dashboards/default
+
+# Pre-configured dashboards from Grafana community
+dashboards:
+  default:
+    # Dashboard 6417 - Kubernetes Cluster Monitoring (via Prometheus)
+    kubernetes-cluster-monitoring:
+      gnetId: 6417
+      revision: 1
+      datasource: Prometheus
+    
+    # Dashboard 3119 - Kubernetes cluster monitoring (via Prometheus)  
+    kubernetes-cluster-prometheus:
+      gnetId: 3119
+      revision: 2
+      datasource: Prometheus
