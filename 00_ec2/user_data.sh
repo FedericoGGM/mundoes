@@ -7,8 +7,8 @@ sudo apt update
 echo "Installing Git"
 sudo apt install -y git
 
-echo "Installing AWS CLI"
-sudo apt install -y awscli
+# echo "Installing AWS CLI"
+# sudo apt install -y awscli
 
 echo "Installing kubectl"
 curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.2/2023-03-17/bin/linux/amd64/kubectl

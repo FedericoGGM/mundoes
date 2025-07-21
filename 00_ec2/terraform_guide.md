@@ -29,7 +29,7 @@ ssh-keygen -t rsa -b 4096 -f pin -N ""
 
 Create the following directory structure:
 ```
-terraform-devops/
+00_ec2/
 ├── main.tf              # Main Terraform configuration
 ├── user_data.sh         # User data script
 ├── pin                  # Private key (generated above)
