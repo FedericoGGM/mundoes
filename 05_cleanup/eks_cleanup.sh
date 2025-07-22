@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "=========================================="
+echo "COMPLETE DEVOPS INTEGRATOR PROJECT CLEANUP"
+echo "=========================================="
+
 # Variables - Update these to match your configuration
 CLUSTER_NAME="eks-mundos-e"
 AWS_REGION="us-east-1"
@@ -21,6 +25,15 @@ confirm() {
         return 1
     fi
 }
+
+if ! confirm "Are you absolutely sure you want to proceed?"; then
+    echo "Cleanup cancelled by user."
+    exit 0
+fi
+
+echo ""
+echo "Starting cleanup process..."
+echo ""
 
 # 2. EKS CLUSTER CLEANUP
 echo "=========================================="

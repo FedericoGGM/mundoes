@@ -20,6 +20,9 @@ This Terraform configuration creates the infrastructure for steps 1-3 of the Dev
 # Generate SSH key pair
 ssh-keygen -t rsa -b 4096 -f pin -N ""
 
+ssh-keygen -t rsa -b 4096 -m PEM -f pin.pem -N ""
+
+
 # This creates two files:
 # - pin (private key)
 # - pin.pub (public key)

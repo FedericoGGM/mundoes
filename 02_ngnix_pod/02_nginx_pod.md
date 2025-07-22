@@ -23,6 +23,7 @@ Now deploy NGINX using one of these approaches:
 ```bash
 # Create the deployment (choose one of the above YAML files)
 kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-pod.yaml
 
 # Or deploy directly without YAML file
 kubectl create deployment nginx-deployment --image=nginx:latest --replicas=2

@@ -58,3 +58,123 @@ kubectl get pods -l app=nginx-deployment
 === LOG SUMMARY ===
 [2025-07-20 05:21:52] Instance variables logged to instance-variables.log
 =============================================
+=============================================
+Instance Variables Log - 2025-07-21 04:01:01
+=============================================
+
+=== TERRAFORM OUTPUTS ===
+[2025-07-21 04:01:01] Getting Terraform outputs...
+EC2_INSTANCE_ID=i-0eb7871d42f975d45
+EC2_PUBLIC_IP=34.229.229.78
+EC2_PUBLIC_DNS=ec2-34-229-229-78.compute-1.amazonaws.com
+KEY_PAIR_NAME=pin
+IAM_ROLE_ARN=arn:aws:iam::183295451532:role/ec2-admin-role
+
+=== SSH CONNECTION DETAILS ===
+SSH_COMMAND=ssh -i pin.pem ubuntu@34.229.229.78
+
+[2025-07-21 04:01:01] Testing SSH connectivity...
+SSH_STATUS=CONNECTED
+
+=== AWS CONFIGURATION ===
+AWS_REGION=us-east-1
+AWS_ACCOUNT_ID=183295451532
+AWS_USER_ARN=arn:aws:iam::183295451532:user/itadmin
+
+=== EKS CLUSTER DETAILS ===
+CLUSTER_NAME=eks-mundos-e
+CLUSTER_STATUS=NOT_FOUND
+CLUSTER_ENDPOINT=N/A
+CLUSTER_VERSION=N/A
+
+=== KUBECTL CONFIGURATION ===
+[2025-07-21 04:01:01] Updating kubeconfig for EKS cluster...
+KUBECONFIG_STATUS=FAILED
+
+=== ENVIRONMENT VARIABLES FOR COPY-PASTE ===
+# Copy these variables to your shell:
+export EC2_PUBLIC_IP="34.229.229.78"
+export EC2_INSTANCE_ID="i-0eb7871d42f975d45"
+export CLUSTER_NAME="eks-mundos-e"
+export AWS_REGION="us-east-1"
+export SSH_COMMAND="ssh -i pin.pem ubuntu@34.229.229.78"
+
+=== QUICK REFERENCE COMMANDS ===
+# SSH to EC2 instance:
+ssh -i pin.pem ubuntu@34.229.229.78
+
+# Connect to EKS cluster:
+aws eks update-kubeconfig --region us-east-1 --name eks-mundos-e
+kubectl get nodes
+
+# Deploy NGINX:
+kubectl create deployment nginx-deployment --image=nginx:latest --replicas=2
+kubectl expose deployment nginx-deployment --port=80 --target-port=80 --type=LoadBalancer
+
+# Check NGINX service:
+kubectl get service nginx-deployment
+kubectl get pods -l app=nginx-deployment
+
+=== LOG SUMMARY ===
+[2025-07-21 04:01:01] Instance variables logged to instance-variables.log
+=============================================
+=============================================
+Instance Variables Log - 2025-07-21 21:10:38
+=============================================
+
+=== TERRAFORM OUTPUTS ===
+[2025-07-21 21:10:38] Getting Terraform outputs...
+EC2_INSTANCE_ID=i-0a2cfe1ff5548889f
+EC2_PUBLIC_IP=3.81.85.12
+EC2_PUBLIC_DNS=ec2-3-81-85-12.compute-1.amazonaws.com
+KEY_PAIR_NAME=pin
+IAM_ROLE_ARN=arn:aws:iam::183295451532:role/ec2-admin-role
+
+=== SSH CONNECTION DETAILS ===
+SSH_COMMAND=ssh -i pin.pem ubuntu@3.81.85.12
+
+[2025-07-21 21:10:38] Testing SSH connectivity...
+SSH_STATUS=CONNECTED
+
+=== AWS CONFIGURATION ===
+AWS_REGION=us-east-1
+AWS_ACCOUNT_ID=183295451532
+AWS_USER_ARN=arn:aws:iam::183295451532:user/itadmin
+
+=== EKS CLUSTER DETAILS ===
+CLUSTER_NAME=eks-mundos-e
+CLUSTER_STATUS=NOT_FOUND
+CLUSTER_ENDPOINT=N/A
+CLUSTER_VERSION=N/A
+
+=== KUBECTL CONFIGURATION ===
+[2025-07-21 21:10:38] Updating kubeconfig for EKS cluster...
+KUBECONFIG_STATUS=FAILED
+
+=== ENVIRONMENT VARIABLES FOR COPY-PASTE ===
+# Copy these variables to your shell:
+export EC2_PUBLIC_IP="3.81.85.12"
+export EC2_INSTANCE_ID="i-0a2cfe1ff5548889f"
+export CLUSTER_NAME="eks-mundos-e"
+export AWS_REGION="us-east-1"
+export SSH_COMMAND="ssh -i pin.pem ubuntu@3.81.85.12"
+
+=== QUICK REFERENCE COMMANDS ===
+# SSH to EC2 instance:
+ssh -i pin.pem ubuntu@3.81.85.12
+
+# Connect to EKS cluster:
+aws eks update-kubeconfig --region us-east-1 --name eks-mundos-e
+kubectl get nodes
+
+# Deploy NGINX:
+kubectl create deployment nginx-deployment --image=nginx:latest --replicas=2
+kubectl expose deployment nginx-deployment --port=80 --target-port=80 --type=LoadBalancer
+
+# Check NGINX service:
+kubectl get service nginx-deployment
+kubectl get pods -l app=nginx-deployment
+
+=== LOG SUMMARY ===
+[2025-07-21 21:10:38] Instance variables logged to instance-variables.log
+=============================================

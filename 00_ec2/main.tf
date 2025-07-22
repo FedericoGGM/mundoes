@@ -71,7 +71,7 @@ data "aws_subnet" "default" {
 # Create key pair
 resource "aws_key_pair" "pin_key" {
   key_name   = var.key_pair_name
-  public_key = file("${path.module}/pin.pub") # You need to generate this file
+  public_key = file("${path.module}/pin.pem.pub") # You need to generate this file
   
   tags = {
     Name    = "${var.project_name}-keypair"
