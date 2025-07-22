@@ -41,13 +41,3 @@ echo "Verifying installation..."
 aws --version
 
 echo "AWS CLI v2 installation completed successfully!"
-echo ""
-echo "Next steps:"
-echo "1. Configure AWS CLI with: aws configure"
-echo "2. Or use IAM roles if running on EC2 with appropriate permissions"
-echo ""
-echo "To configure AWS CLI manually, you'll need:"
-echo "- AWS Access Key ID"
-echo "- AWS Secret Access Key" 
-echo "- Default region name (e.g., us-east-1)"
-echo "- Default output format (json, text, or table)"
